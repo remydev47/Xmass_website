@@ -26,4 +26,16 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== DAY COUNTER FOR CHRISTMAS ===============*/
+const titleData = document.getElementById('title-data'),
+      numberData = document.getElementById('number-data'),
+      textData = document.getElementById('text-data'),
+      msgChristmas = document.getElementById('msg-christmas')
 
+const scrollHeader = () => {
+    const header = document.getElementById('header')
+    //when the scroll is Greater tha 50 viewport, add the scroll-header class to the Header tag
+    this.scrollY >= 50 ? header.classList.add('scroll-header')
+                        : header.classList.remove('scroll-header')
+}
+
+window.addEventListener('scroll', scrollHeader)
